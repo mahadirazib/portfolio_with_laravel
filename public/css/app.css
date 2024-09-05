@@ -1,0 +1,8 @@
+
+*{
+  font-family: "Poppins", sans-serif;
+}
+
+::-webkit-scrollbar-track {
+  background: #363636; /* color of the tracking area */
+  }

@@ -1,0 +1,30 @@
+{
+  "Front end Technologies": {
+      "HTML": "90%",
+      "CSS": "85%",
+      "Tailwind": "70%",
+      "Bootstrap": "70%",
+      "JavaScript": "80%",
+      "React": "60%"
+  },
+  "Back end Technologies": {
+    "PHP": "65%",
+    "Laravel": "80%",
+    "Django": "60%",
+    "MySQL": "80%",
+    "Node.js": "45%"
+  },
+  "Programming Languages": {
+      "JavaScript": "90%",
+      "Python": "85%",
+      "PHP": "65%",
+      "Java": "50%",
+      "C++": "65%"
+  },
+  "Other Experiences": {
+      "Chrome Extension": "80%",
+      "Problem Solving": "75%",
+      "English": "80%",
+      "Version Controll": "65%"
+  }
+}
