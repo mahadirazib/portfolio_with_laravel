@@ -59,7 +59,7 @@
           @endif
 
           <div class="mt-4">
-            <a class="text-sm font-semibold hover:text-cyan-400" href="{{ route('project') }}">&lt;&lt; Back</a>
+            <a class="text-sm font-semibold hover:text-cyan-300" href="{{ route('project') }}">&lt;&lt; Back</a>
           </div>
         </div>
 
