@@ -38,21 +38,36 @@
                         </a>
                     @endif
 
-                    <a href="" class="mr-2 md:mr-3">
-                        <img class="inline" src="{{ asset('storage/icons/linkedin.svg') }}" style="width: 25px; md:width: 30px;" alt="in">
-                    </a>
+                    @if (isset($info['linkedin']) && $info['linkedin'] != null)
+                        <a href="{{ $info['linkedin'] }}" class="mr-2 md:mr-3" target="_blank">
+                            <img class="inline" src="{{ asset('storage/icons/linkedin.svg') }}" style="width: 25px; md:width: 30px;" alt="in">
+                        </a>
+                    @endif
 
-                    <a href="" class="mr-2 md:mr-3">
-                        <img class="inline" src="{{ asset('storage/icons/whatsapp.svg') }}" style="width: 25px; md:width: 30px;" alt="📱">
-                    </a>
+                    @if (isset($info['whatsapp']) && $info['whatsapp'] != null)
+                        <a href="https://api.whatsapp.com/send?phone={{ $info['whatsapp'] }}" class="mr-2 md:mr-3" target="_blank">
+                            <img class="inline" src="{{ asset('storage/icons/whatsapp.svg') }}" style="width: 25px; md:width: 30px;" alt="📱">
+                        </a>
+                    @endif
 
-                    <a href="" class="mr-2 md:mr-3">
-                        <img class="inline" src="{{ asset('storage/icons/github.svg') }}" style="width: 25px; md:width: 30px;" alt="😎">
-                    </a>
 
-                    <a href="" class="mr-2 md:mr-3">
-                        <img class="inline" src="{{ asset('storage/icons/phone.svg') }}" style="width: 25px; md:width: 30px;" alt="📱">
-                    </a>
+                    @if (isset($info['github']) && $info['github'] != null)
+                        <a href="{{ $info['github'] }}" class="mr-2 md:mr-3" target="_blank">
+                            <img class="inline" src="{{ asset('storage/icons/github.svg') }}" style="width: 25px; md:width: 30px;" alt="😎">
+                        </a>
+                    @endif
+
+                    @if (isset($info['phone']) && $info['phone'] != null)
+                        <a href="tel:{{ $info['phone'] }}" class="mr-2 md:mr-3" target="_blank">
+                            <img class="inline" src="{{ asset('storage/icons/phone.svg') }}" style="width: 25px; md:width: 30px;" alt="📱">
+                        </a>
+                    @endif
+
+                    @if (isset($info['email']) && $info['email'] != null)
+                        <a href="mailto:{{ $info['email'] }}" class="mr-2 md:mr-3" target="_blank">
+                            <img class="inline" src="{{ asset('storage/icons/mail.svg') }}" style="width: 25px; md:width: 30px;" alt="✉">
+                        </a>
+                    @endif
 
                 </div>
             
