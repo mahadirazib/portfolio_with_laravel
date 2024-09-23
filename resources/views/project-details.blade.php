@@ -11,7 +11,7 @@
         <div>
           <h1 class="text-2xl font-bold text-white pb-3"> {{ $project['name'] }}</h1>
           
-          <div class=" text-sm font-light text-typewriter-effect">
+          <div class=" text-sm font-light text-typewriter-effect" style="min-height: 100px;">
             {{ $project['description'] }}
           </div>
 
@@ -34,7 +34,6 @@
 
                     <div class="full-image-canvas" >
                       <div class="bg-cover-image" style="background-image: url('{{ asset('storage/project_images/'.$image) }}');"></div>
-                      {{-- <img class="" src="" alt="project image"> --}}
                     </div>
 
                   </div>
@@ -47,13 +46,13 @@
 
         <div class="mt-12 block">
           @if ($project['link_to_view'] != null)
-            <a class="me-2 p-2 px-6 rounded text-normal font-semibold bg-gray-800 
+            <a class="me-2 p-2 px-6 rounded text-normal font-semibold bg-gray-800 make-block-in-phone
             hover:bg-{{ ['teal', 'cyan', 'blue', 'indigo', 'yellow', 'violet', 'lime', 'orange', 'rose'][mt_rand(0, 6)] }}-700" 
             href="{{ $project['link_to_view'] }}" target="_blank">See Actual Site</a>
           @endif
 
           @if ($project['link_to_repo'] != null)
-            <a class="me-2 p-2 px-6 rounded text-normal font-semibold bg-gray-800 
+            <a class="me-2 p-2 px-6 rounded text-normal font-semibold bg-gray-800 make-block-in-phone
             hover:bg-{{ ['teal', 'cyan', 'blue', 'indigo', 'yellow', 'violet', 'lime', 'orange', 'rose'][mt_rand(0, 6)] }}-700" 
             href="{{ $project['link_to_repo'] }}" target="_blank">Download Code</a>
           @endif
@@ -105,6 +104,7 @@
     background-color: rgba(0, 0, 0, 0.2);
     backdrop-filter: blur(2px);
     transition: opacity 0.5s, visibility 0.5s;
+    z-index: 1010;
   }
 
 
@@ -131,6 +131,15 @@
     100% {
       transform: scale(100%);
       opacity: 1;
+    }
+  }
+
+
+  @media only screen and (max-width:670px){
+    .make-block-in-phone{
+      display: block;
+      margin: 10px 0;
+      text-align: center;
     }
   }
 
