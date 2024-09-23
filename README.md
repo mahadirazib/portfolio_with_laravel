@@ -1,6 +1,6 @@
 # Portfolio Template
 
-This is a responsive portfolio template with laravel and tailwind css.
+This is a responsive portfolio template build with laravel and tailwind css. Just edot the onformation according to your needs and the portfolio is ready.
 
 ## Customize
 
@@ -8,7 +8,9 @@ To update the information you dont need to change any code. Just edit the json f
 
 ### Edit Introduction page info:
 
-personal_info.json file is used in the index page. edit the information according to it's name. for the social links if you don't want to give any information then set "null" to those fields. make sure to use "https://" before any links. And don't usee the + sign for whatsapp and please assign country code for this.
+personal_info.json file is used in the index page. edit the information according to it's name. for the social links if you don't want to give any information then set "null" to those fields. 
+Make sure to use "https://" before any links. And don't usee the + sign for whatsapp and please assign country code for this. 
+The image is located inside storage/app/images directory. Just assign the name of the image with it's format.
 
 ### Edit Projects page info:
 
@@ -53,6 +55,7 @@ If you want the contact page to work properly then create a gmail app. And chang
 ## Conclusion
 
 This is a fully functional template that you can use to build your portfolio right away. Just edit the informations and the portfolio is ready.
+If you host this portfolio in the web then after deploying go to "yoursite.com/make_symlink" this route for linking the files properly.
 
 # Thank you
 

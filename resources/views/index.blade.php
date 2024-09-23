@@ -78,7 +78,7 @@
         <!-- Right Content Area (Image) -->
         <div class="col-span-2 p-6 w-full h-full relative overflow-hidden" style="min-height: 50vh;">
             <div class="flex w-full h-full items-center justify-center relative" style="animation: grow-opacity-animation 0.5s ease;">
-                <img class="image-hover" src="{{ asset('storage/images/my_image.jpg') }}" alt="My Image">
+                <img class="image-hover" src="{{ asset('storage/images/'.$info['image']) }}" alt="My Image">
                 <div class="back-1 bg-cyan-600"></div>
                 <div class="back-2 bg-cyan-600"></div>
             </div>
