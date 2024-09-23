@@ -4,11 +4,11 @@
 
 <div class="w-100 h-100" style="height: 100%">
     <div class="text-white" style="height: 100%">
-      <div class="p-8 pe-12 flex flex-col flex-wrap justify-between" style="height: 100%">
+      <div class="p-8 sm:mb-10 flex md:flex-col sm:flex-row flex-wrap " style="height: 100%">
 
-        <h1 class="text-2xl font-bold text-white pb-2">My Skills:</h1>
+        <h1 class="text-2xl font-bold text-white pb-4">My Skills:</h1>
 
-        <div class="grid grid-cols-2 gap-10">
+        <div class="grid md:grid-cols-2 sm:grid-cols-1 gap-10 sm:gap-5 pb-10">
           @foreach ($skills as $section => $skill)
             <div>
               <div class="mb-2">

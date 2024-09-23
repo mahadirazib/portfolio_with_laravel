@@ -14,17 +14,19 @@
 
           <h2 class="text-md font-bold mt-6 mb-2">{{ $section }}:</h2>
           
-          <div class="grid grid-cols-3 gap-6">
+          <div class="grid md:grid-cols-3 sm:grid-cols-1 gap-6">
             @php
-              $num = 0.7;
+              $num = 0.5;
             @endphp
 
             @foreach ($data as $link => $project)
-              <div class="project-details rounded border border-t-0 border-l-0 border-{{ ['teal', 'cyan', 'blue', 'indigo', 'yellow', 'violet', 'lime', 'orange', 'rose'][mt_rand(0, 6)] }}-600 p-4 pb-6"
+              <div class="project-details rounded border border-t-0 border-l-0 
+              border-{{ ['teal', 'cyan', 'blue', 'indigo', 'yellow', 'violet', 'lime', 'orange', 'rose'][mt_rand(0, 6)] }}-600 
+              p-4 pb-6"
               style="animation: grow-opacity-animation {{ $num }}s ease;"
               > 
               @php
-                $num += 0.3;
+                $num += 0.2;
               @endphp
 
                 <h3 class="text-normal"> {{ Str::limit($project['name'], 20) }} </h3>

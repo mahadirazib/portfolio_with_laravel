@@ -1,10 +1,9 @@
-<!--Sidebar-->
-<div
-    class="bg-slate-950 px-2 pt-8 pb-8 w-100 h-100" style="height: 100%">
-    <div class=" mx-auto lg:px-6">
+<!-- Sidebar -->
+<div class="px-2 pt-8 pb-8 h-full w-full z-50">
+    <div class="mx-auto lg:px-6">
         <div class="flex flex-col">
             <div class="flex-1 grow text-white">
-                <a href="{{ route('index') }}" class="block w-100 p-3 rounded hover:bg-blue-950
+                <a href="{{ route('index') }}" class="block w-full p-3 rounded hover:bg-blue-950
                 @if (request()->routeIs('index'))
                     bg-slate-900
                 @endif
@@ -13,7 +12,7 @@
                 </a>
             </div>
             <div class="flex-1 grow text-white">
-                <a href="{{ route('project') }}" class="block w-100 p-3 rounded hover:bg-lime-950 active:bg-blue-950
+                <a href="{{ route('project') }}" class="block w-full p-3 rounded hover:bg-lime-950 active:bg-blue-950
                 @if (request()->routeIs('project') || request()->routeIs('project.view'))
                     bg-slate-900
                 @endif
@@ -22,7 +21,7 @@
                 </a>
             </div>
             <div class="flex-1 grow text-white">
-                <a href="{{ route('experience') }}" class="block w-100 p-3 rounded hover:bg-cyan-950 active:bg-blue-950
+                <a href="{{ route('experience') }}" class="block w-full p-3 rounded hover:bg-cyan-950 active:bg-blue-950
                 @if (request()->routeIs('experience'))
                     bg-slate-900
                 @endif
@@ -31,7 +30,7 @@
                 </a>
             </div>
             <div class="flex-1 grow text-white">
-                <a href="{{ route('skill') }}" class="block w-100 p-3 rounded hover:bg-teal-950 active:bg-blue-950
+                <a href="{{ route('skill') }}" class="block w-full p-3 rounded hover:bg-teal-950 active:bg-blue-950
                 @if (request()->routeIs('skill'))
                     bg-slate-900
                 @endif
@@ -40,7 +39,7 @@
                 </a>
             </div>
             <div class="flex-1 grow text-white">
-                <a href="{{ route('contact') }}" class="block w-100 p-3 rounded hover:bg-indigo-950
+                <a href="{{ route('contact') }}" class="block w-full p-3 rounded hover:bg-indigo-950
                 @if (request()->routeIs('contact'))
                     bg-slate-900
                 @endif
@@ -50,7 +49,7 @@
             </div>
 
             <div class="flex-1 grow text-white mt-16">
-                <a href="{{ route('download.cv') }}" class="block w-100 p-3 rounded hover:bg-rose-950
+                <a href="{{ route('download.cv') }}" class="block w-full p-3 rounded hover:bg-rose-950
                 @if (request()->routeIs('download.cv'))
                     bg-slate-900
                 @endif

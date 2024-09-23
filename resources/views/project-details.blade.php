@@ -22,7 +22,7 @@
         @endphp
         <div class="mt-4">
           @if ($project['images'] != null)
-            <div class="grid grid-cols-3 gap-4">
+            <div class="grid md:grid-cols-3 sm:grid-cols-1 gap-4">
               @foreach ($project['images'] as $image)
                 @if (file_exists(('storage/project_images/'.$image)))
                   <div class="project-image w-100 make-image-visible" onclick="makeVisible(this)" style="animation: grow-opacity-animation {{ $num }}s ease;">

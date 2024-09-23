@@ -4,9 +4,9 @@
 
 <div class="w-100 h-100" style="height: 100%">
     <div class="text-white" style="height: 100%">
-      <div class="p-8 pe-12 flex flex-col flex-wrap justify-between" style="height: 100%">
+      <div class="p-8 flex flex-col flex-wrap" style="height: 100%">
 
-        <h1 class="text-2xl font-bold text-white pb-2">Contact Me:</h1>
+        <h1 class="text-2xl font-bold text-white pb-4">Contact Me:</h1>
         
         <div class="max-w-screen-md w-100">
           {{-- <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900 dark:text-white">Contact Me:</h2> --}}

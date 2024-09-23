@@ -4,7 +4,7 @@
 
 <div class="w-100 h-100" style="height: 100%">
     <div class="text-white w-100" style="height: 100%">
-      <div class="p-8 pe-12 w-100 flex flex-wrap items-center justify-items-center justify-center" style="height: 100%">
+      <div class="p-8 w-100 flex flex-wrap items-center justify-items-center justify-center" style="height: 100%">
 
         <div class="text-center">
           <h1 class="text-2xl font-bold text-white pb-2 text-typewriter-effect">Thanks for your message.</h1>

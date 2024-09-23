@@ -2,67 +2,70 @@
 
 @section('content')
 
-<div class="w-100 h-100" style="height: 100%">
-    <div class="grid grid-cols-5 text-white" style="height: 100%">
+<div class="w-full h-full">
+    <div class="grid grid-cols-1 md:grid-cols-5 text-white h-full">
 
-        <div class="col-span-3 p-8">
+        <!-- Left Content Area (Text and Links) -->
+        <div class="col-span-3 p-4 md:p-8">
 
-            <div class="flex flex-col flex-wrap justify-between" style="height: 100%">
+            <div class="flex flex-col justify-between h-full">
 
-                <div class="mt-10">
+                <div class="mt-6 md:mt-10 mb-10">
                     <div class="mb-3">
-                        <div class="inline me-3">
+                        <div class="inline-block mr-3">
                             <img class="inline hand-icon" src="{{ asset('storage/icons/hand.svg') }}" style="width: 40px;" alt="👋"> 
                         </div>
                         Hi There!
                     </div>
-                    <h1 class="text-4xl font-bold text-white">I am Mahadi Razib</h1>
+                    <h1 class="text-2xl md:text-4xl font-bold text-white">{{ $info['title'] }}</h1>
                     
-                    <p class="text-sm font-light text-typewriter-effect">
-                        I am a web designer and developer since 2020. I have some skills if not many, but I am confident about those skills. Please check out my portfolio to know my skills better.
+                    <p class="text-xs md:text-sm font-light text-typewriter-effect mt-2" style="min-height: 70px;">
+                        {{ $info['description'] }}
                     </p>
 
-                    <div class="mt-6">
-                        <a class=" p-4 bg-slate-950 rounded-md text-sm" href="{{ route('project') }}">See My Projects ➥</a>
+                    <div class="mt-4 md:mt-6">
+                        <a class="p-3 md:p-4 bg-slate-950 rounded-md text-xs md:text-sm" href="{{ route('project') }}">See My Projects ➥</a>
                     </div>
                 </div>
     
-                <div class="mb-10">
+                <div class="mb-6 md:mb-10">
 
-                    <span class="text-lg font-semibold text-white me-5">Follow Me On:</span>
+                    <span class="text-sm md:text-lg font-semibold text-white mr-3 md:mr-5">Get in touch:</span>
 
-                    <a href="" class="me-3">
-                        <img class="inline" src="{{ asset('storage/icons/facebook.svg') }}" style="width: 30px;" alt="f">
+                    @if (isset($info['facebook']) && $info['facebook'] != null)
+                        <a href="{{ $info['facebook'] }}" class="mr-2 md:mr-3" target="_blank">
+                            <img class="inline" src="{{ asset('storage/icons/facebook.svg') }}" style="width: 25px; md:width: 30px;" alt="f">
+                        </a>
+                    @endif
+
+                    <a href="" class="mr-2 md:mr-3">
+                        <img class="inline" src="{{ asset('storage/icons/linkedin.svg') }}" style="width: 25px; md:width: 30px;" alt="in">
                     </a>
 
-                    <a href="" class="me-3">
-                        <img class="inline" src="{{ asset('storage/icons/linkedin.svg') }}" style="width: 30px;" alt="in">
+                    <a href="" class="mr-2 md:mr-3">
+                        <img class="inline" src="{{ asset('storage/icons/whatsapp.svg') }}" style="width: 25px; md:width: 30px;" alt="📱">
                     </a>
 
-                    <a href="" class="me-3">
-                        <img class="inline" src="{{ asset('storage/icons/whatsapp.svg') }}" style="width: 30px;" alt="📱">
+                    <a href="" class="mr-2 md:mr-3">
+                        <img class="inline" src="{{ asset('storage/icons/github.svg') }}" style="width: 25px; md:width: 30px;" alt="😎">
                     </a>
 
-                    <a href="" class="me-3">
-                        <img class="inline" src="{{ asset('storage/icons/github.svg') }}" style="width: 30px;" alt="😎">
-                    </a>
-
-                    <a href="" class="me-3">
-                        <img class="inline" src="{{ asset('storage/icons/phone.svg') }}" style="width: 30px;" alt="📱">
+                    <a href="" class="mr-2 md:mr-3">
+                        <img class="inline" src="{{ asset('storage/icons/phone.svg') }}" style="width: 25px; md:width: 30px;" alt="📱">
                     </a>
 
                 </div>
             
             </div>
 
-
         </div>
 
-        <div class="col-span-2 overflow-hidden p-6 w-100" style="height: 100%;">
-            <div class="flex w-100 h-100 flex-wrap items-center justify-items-center justify-center" style="height: 100%; animation: grow-opacity-animation 1s ease;">
-                <img class="w-100 image-hover" src="{{ asset('storage/images/my_image.jpg') }}" style="" alt="My Image">
-                <div class="back-1 bg-cyan-600" style="border-radius: 50%"></div>
-                <div class="back-2 bg-cyan-600" style="border-radius: 50%"></div>
+        <!-- Right Content Area (Image) -->
+        <div class="col-span-2 p-6 w-full h-full relative overflow-hidden" style="min-height: 50vh;">
+            <div class="flex w-full h-full items-center justify-center relative" style="animation: grow-opacity-animation 0.5s ease;">
+                <img class="image-hover" src="{{ asset('storage/images/my_image.jpg') }}" alt="My Image">
+                <div class="back-1 bg-cyan-600"></div>
+                <div class="back-2 bg-cyan-600"></div>
             </div>
         </div>
         
@@ -72,44 +75,43 @@
 
 <style>
 
-    .hand-icon{
+    /* Hand icon animation */
+    .hand-icon {
         transform: rotate(0deg);
         transform-origin: bottom center;
         animation: hand-animation 5s ease infinite;
     }
 
-    .back-1{
+    /* Circular background animation */
+    .back-1, .back-2 {
         position: absolute;
-        width: 170px;
-        height: 170px;
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
         z-index: 1;
         animation: live 2s linear infinite;
     }
 
-    .back-2{
-        position: absolute;
-        width: 170px;
-        height: 170px;
-        z-index: 1;
-        animation: live 2s linear infinite;
+    .back-2 {
         animation-delay: -1s;
     }
 
-    .image-hover{
-        width: 170px;
+    /* Image hover effect */
+    .image-hover {
+        width: 200px;
         border-radius: 50%;
         z-index: 10;
         transition: transform 0.5s ease, border-radius 0.5s ease;
     }
-    .image-hover:hover{
+
+    .image-hover:hover {
         border-radius: 5%;
-        transform: scale(170%);
-        box-shadow: 10px black;
+        transform: scale(150%);
     }
 
-
+    /* Keyframes for animation */
     @keyframes live {
-        0%   {
+        0% {
             transform: scale(100%);
             opacity: 1;
         }
@@ -119,10 +121,8 @@
         }
     }
 
-
-
     @keyframes hand-animation {
-        0%   {
+        0% {
             transform: rotate(0deg);
         }
         5% {
@@ -143,7 +143,7 @@
     @keyframes grow-opacity-animation {
         0%   {
         opacity: 0;
-        transform: scale(50%);
+        transform: scale(80%);
         }
         100% {
         transform: scale(100%);
@@ -152,7 +152,5 @@
     }
 
 </style>
-
-
 
 @endsection

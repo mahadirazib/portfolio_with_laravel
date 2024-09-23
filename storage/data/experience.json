@@ -1,17 +1,22 @@
 {
-  "SoftTech": {
-      "designation": "Jr. Software Developer",
-      "from": "Jul 2024",
-      "to": "Present"
-  },
-  "Kulliyatul Quran": {
-      "designation": "Assistant ICT Teacher",
-      "from": "Jun 2023",
-      "to": "Jun 2024"
-  },
-  "Mini Institute": {
-      "designation": "Jr. Web Developer",
-      "from": "Jan 2020",
-      "to": "Jun 2023"
-  }
+    "description" : "I may not be an extra ordinary person but I have worked with many talented and extra ordinary developers and gained a portion of their knowledge. I may not have talent but I can work hard. I have completed my Bachelor's degree in Computer Science and Engineering with a great result.",
+    
+    "experiences": {
+        "SoftTech": {
+            "designation": "Jr. Software Developer",
+            "from": "Jul 2024",
+            "to": "Present"
+        },
+        "Kulliyatul Quran": {
+            "designation": "Assistant ICT Teacher",
+            "from": "Jun 2023",
+            "to": "Jun 2024"
+        },
+        "Mini Institute": {
+            "designation": "Jr. Web Developer",
+            "from": "Jan 2020",
+            "to": "Jun 2023"
+        }
+    }
+
 }
