@@ -29,7 +29,8 @@ The project images is held in the storage/app/public/project_images directory. J
 
 ### Edit Experiences page info:
 
-experience.json file is used for experiences page. There are two part in this page. "description", "experiences". Inside the experiences the format looks like this:
+experience.json file is used for experiences page. There are two part in this page. "description", "experiences". Inside the experiences the format looks like this:\
+```
   "experiences": {
     "Company name": {
       "designation": "Designation or title of your job",
@@ -38,6 +39,7 @@ experience.json file is used for experiences page. There are two part in this pa
     }
     ...........
   }
+```
 
 ### Edit Skills page info:
 
