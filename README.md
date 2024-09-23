@@ -15,16 +15,18 @@ The image is located inside storage/app/images directory. Just assign the name o
 ### Edit Projects page info:
 
 projects.json file is used for projects page. The format of this page is like:\
-  "Name of the section": {\
-    "unique_name": {\
-      "name"        : "Name of the Project",\
-      "description" : "Description of the project.",\
-      "link_to_view": "Link to the live project(If the site is live on internet).",\
-      "link_to_repo": "Link to github repository(if it is uploaded in github).",\
-      "images": ["image1.format", "image2.format", ..... ]\
-    },\
-    ............\
-  }\
+```
+  "Name of the section": {
+    "unique_name": {
+      "name"        : "Name of the Project",
+      "description" : "Description of the project.",
+      "link_to_view": "Link to the live project(If the site is live on internet).",
+      "link_to_repo": "Link to github repository(if it is uploaded in github).",
+      "images": ["image1.format", "image2.format", ..... ]
+    },
+    ............
+  }
+```
 The project images is held in the storage/app/public/project_images directory. Just specify the name opf the images in the json file. And make sure to start any links with "https://".
 
 ### Edit Experiences page info:
@@ -43,11 +45,13 @@ experience.json file is used for experiences page. There are two part in this pa
 
 ### Edit Skills page info:
 
-skills.json file is used for this page. The format of the json file looks like this:
+skills.json file is used for this page. The format of the json file looks like this:\
+```
   "Name of the Section": {
     "Skill Name": "familiarity%"
     ...............
   }
+```
 make sure to assign integer value and add a "%"(percentage sign) in the end.
 
 ### Make the Contact page Working:
