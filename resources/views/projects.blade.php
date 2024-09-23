@@ -16,7 +16,7 @@
           
           <div class="grid grid-cols-3 gap-6">
             @php
-              $num = 0.5;
+              $num = 0.7;
             @endphp
 
             @foreach ($data as $link => $project)
@@ -24,17 +24,22 @@
               style="animation: grow-opacity-animation {{ $num }}s ease;"
               > 
               @php
-                $num += 0.5;
+                $num += 0.3;
               @endphp
 
                 <h3 class="text-normal"> {{ Str::limit($project['name'], 20) }} </h3>
                 <p class="text-xs font-light mb-3"> {{ Str::limit($project['description'], 100) }} </p>
-                <a class="me-2 p-2 rounded text-xs font-bold bg-gray-800 
-                hover:bg-{{ ['teal', 'cyan', 'blue', 'indigo', 'yellow', 'violet', 'lime', 'orange', 'rose'][mt_rand(0, 6)] }}-700" 
-                href="{{ $project['link_to_view'] }}" target="_blank">See Live</a>
-                <a class="me-2 p-2 rounded text-xs font-bold bg-gray-800 
-                hover:bg-{{ ['teal', 'cyan', 'blue', 'indigo', 'yellow', 'violet', 'lime', 'orange', 'rose'][mt_rand(0, 6)] }}-700" 
-                href="{{ $project['link_to_repo'] }}" target="_blank">Code</a>
+                @if ($project['link_to_view'] != null)
+                  <a class="me-2 p-2 rounded text-xs font-bold bg-gray-800 
+                  hover:bg-{{ ['teal', 'cyan', 'blue', 'indigo', 'yellow', 'violet', 'lime', 'orange', 'rose'][mt_rand(0, 6)] }}-700" 
+                  href="{{ $project['link_to_view'] }}" target="_blank">See Live</a>                  
+                @endif
+
+                @if ($project['link_to_repo'] != null)
+                  <a class="me-2 p-2 rounded text-xs font-bold bg-gray-800 
+                  hover:bg-{{ ['teal', 'cyan', 'blue', 'indigo', 'yellow', 'violet', 'lime', 'orange', 'rose'][mt_rand(0, 6)] }}-700" 
+                  href="{{ $project['link_to_repo'] }}" target="_blank">Code</a>
+                @endif
                 <a class="me-2 p-2 rounded text-xs font-bold bg-gray-800 
                 hover:bg-{{ ['teal', 'cyan', 'blue', 'indigo', 'yellow', 'violet', 'lime', 'orange', 'rose'][mt_rand(0, 6)] }}-700" 
                 href="{{ route( 'project.view', $link) }}">See Details</a>
@@ -56,6 +61,7 @@
 <style>
   .project-details{
     /* height: 150px; */
+    background-color: rgba(0, 0, 0, 0.2)
   }
 
   a{

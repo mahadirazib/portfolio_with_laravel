@@ -40,8 +40,22 @@
                 </a>
             </div>
             <div class="flex-1 grow text-white">
-                <a href="#" class="block w-100 p-3 rounded hover:bg-indigo-950">
+                <a href="{{ route('contact') }}" class="block w-100 p-3 rounded hover:bg-indigo-950
+                @if (request()->routeIs('contact'))
+                    bg-slate-900
+                @endif
+                ">
                     Contact
+                </a>
+            </div>
+
+            <div class="flex-1 grow text-white mt-16">
+                <a href="{{ route('download.cv') }}" class="block w-100 p-3 rounded hover:bg-rose-950
+                @if (request()->routeIs('download.cv'))
+                    bg-slate-900
+                @endif
+                ">
+                    Download CV
                 </a>
             </div>
         </div>

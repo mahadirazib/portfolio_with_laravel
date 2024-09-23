@@ -13,12 +13,12 @@
           <div class="flex flex-wrap justify-between w-100">
 
             @php
-              $num = 2;
+              $num = 1.5;
             @endphp
             @foreach ($experiences as $company => $val)
               <div class="opacity-animation" style="animation: grow-opacity-animation {{ $num }}s ease;">
                 @php
-                  $num -= 0.7;
+                  $num -= 0.4;
                 @endphp
                 <div class="h-25 w-25 rounded bg-cyan-600 p-4">
                   <h2 class="text-md font-semibold"> <q> {{ $company }} </q> </h2>

@@ -42,7 +42,7 @@
 
 <style>
   .grow-from-0{
-    animation: grow-animation 1.5s ease;
+    animation: grow-animation 1.5s cubic-bezier(0.84, 0.03, 0.15, 1.36);
   }
 
 

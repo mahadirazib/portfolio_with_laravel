@@ -17,21 +17,47 @@
 
         </div>
 
-        <div class="mt-4 bg-white">
-          @if ($project['link_to_view'] != null)
-            <iframe src="{{ $project['link_to_view'] }}" frameborder="0" style="width: 100%; min-height: 200px;"></iframe>
-          @else
-            <h2 class="text-normal text-black font-bold m-4">No Preview available</h2>
+        @php
+          $num = 0.7;
+        @endphp
+        <div class="mt-4">
+          @if ($project['images'] != null)
+            <div class="grid grid-cols-3 gap-4">
+              @foreach ($project['images'] as $image)
+                @if (file_exists(('storage/project_images/'.$image)))
+                  <div class="project-image w-100 make-image-visible" onclick="makeVisible(this)" style="animation: grow-opacity-animation {{ $num }}s ease;">
+                    @php
+                      $num += 0.3;
+                    @endphp
+
+                    <img class="w-100" src="{{ asset('storage/project_images/'.$image) }}" alt="project image">
+
+                    <div class="full-image-canvas" >
+                      <div class="bg-cover-image" style="background-image: url('{{ asset('storage/project_images/'.$image) }}');"></div>
+                      {{-- <img class="" src="" alt="project image"> --}}
+                    </div>
+
+                  </div>
+                @endif
+              @endforeach
+            </div>
           @endif
         </div>
 
-        <div class="mt-12">
-          <a class="me-2 p-2 px-6 rounded text-normal font-semibold bg-gray-800 
-          hover:bg-{{ ['teal', 'cyan', 'blue', 'indigo', 'yellow', 'violet', 'lime', 'orange', 'rose'][mt_rand(0, 6)] }}-700" 
-          href="{{ $project['link_to_view'] }}" target="_blank">See Actual Site</a>
-          <a class="me-2 p-2 px-6 rounded text-normal font-semibold bg-gray-800 
-          hover:bg-{{ ['teal', 'cyan', 'blue', 'indigo', 'yellow', 'violet', 'lime', 'orange', 'rose'][mt_rand(0, 6)] }}-700" 
-          href="{{ $project['link_to_repo'] }}" target="_blank">Download Code</a>
+
+        <div class="mt-12 block">
+          @if ($project['link_to_view'] != null)
+            <a class="me-2 p-2 px-6 rounded text-normal font-semibold bg-gray-800 
+            hover:bg-{{ ['teal', 'cyan', 'blue', 'indigo', 'yellow', 'violet', 'lime', 'orange', 'rose'][mt_rand(0, 6)] }}-700" 
+            href="{{ $project['link_to_view'] }}" target="_blank">See Actual Site</a>
+          @endif
+
+          @if ($project['link_to_repo'] != null)
+            <a class="me-2 p-2 px-6 rounded text-normal font-semibold bg-gray-800 
+            hover:bg-{{ ['teal', 'cyan', 'blue', 'indigo', 'yellow', 'violet', 'lime', 'orange', 'rose'][mt_rand(0, 6)] }}-700" 
+            href="{{ $project['link_to_repo'] }}" target="_blank">Download Code</a>
+          @endif
+
           <div class="mt-4">
             <a class="text-sm font-semibold hover:text-cyan-400" href="{{ route('project') }}">&lt;&lt; Back</a>
           </div>
@@ -46,14 +72,56 @@
 
 
 <style>
-  .project-details{
-    /* height: 150px; */
+  .project-image{
+    width: 100%;
+    height: 150px;
+    overflow: hidden;
+    cursor: pointer;
+  }
+
+  .project-image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 
   a{
     transition: background-color 0.5s ease;
   }
 
+
+  .full-image-canvas{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    padding: 50px;
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(2px);
+    transition: opacity 0.5s, visibility 0.5s;
+  }
+
+
+  .full-image-canvas.visible {
+    opacity: 1;
+    visibility: visible;
+    display: block;
+  }
+
+
+  .bg-cover-image{
+    width: 100%;
+    height: 100%;
+    background: no-repeat center;
+    background-size: contain;
+
+  }
 
   @keyframes grow-opacity-animation {
     0%   {
@@ -68,5 +136,35 @@
 
 </style>
 
+
+
+<script>
+  
+  function makeVisible(ele){
+
+    ele.querySelector('.full-image-canvas').style.display = "flex";
+
+    setTimeout(() => {
+      ele.querySelector('.full-image-canvas').classList.add('visible');
+    }, 100);
+
+  }
+
+
+  let elements = document.querySelectorAll('.full-image-canvas');
+  elements.forEach(ele => {
+    ele.addEventListener('click', function(event){
+
+      ele.classList.remove('visible');
+      setTimeout(() => {
+          ele.style.display = 'none';
+      }, 500);
+
+      event.stopPropagation();
+    })
+  });
+
+
+</script>
 
 @endsection

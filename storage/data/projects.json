@@ -5,21 +5,21 @@
       "description": "It is an application to know about yourself from other without seeing their information. In other word you can say anything about others but they can not see your information.",
       "link_to_view": "https://truthwhisper.000webhostapp.com/index.php",
       "link_to_repo": "https://github.com/mahadirazib/truthwhisper",
-      "image": null
+      "images": ["truthwisper1.jpg", "truthwisper2.jpg", "truthwisper3.jpg"]
     },
     "erpstarup": {
       "name": "Dummy Erp For Startup",
       "description": "This is a replica of erp that can be used in startup companies. Although it has limited features but it can be used for little teams. The main id and password is: 'bigboss' which is the admin/head account. But there are other roles such as employee, modarator, etc.",
       "link_to_view": "http://mahadirazib.pythonanywhere.com",
       "link_to_repo": "https://github.com/mahadirazib/videostreammingsite",
-      "image": null
+      "images": ["erpstarup1.jpg", "erpstarup2.jpg", "erpstarup3.jpg"]
     },
     "vidtream": {
       "name": "Video Streaming site",
       "description": "This is a video streaming site built with django. You can create your account and then publish your video.",
       "link_to_view": null,
       "link_to_repo": "https://github.com/mahadirazib/videostreammingsite",
-      "image": null
+      "images": ["vidtream1.jpg", "vidtream2.jpg", "vidtream3.jpg"]
     }
   },
   "Front end Design": {
@@ -28,21 +28,21 @@
       "description": "It is simple webpage design. One single page holds the hero section, products section, pricing section, etc.",
       "link_to_view": "https://mahadirazib.github.io/Garichai",
       "link_to_repo": "https://github.com/mahadirazib/Garichai",
-      "image": null
+      "images": ["garichai1.jpg", "garichai2.jpg"]
     },
     "productcart": {
       "name": "Product list demo",
       "description": "A simple shopping cart. It can be used in many different ways. There is a nice hover effect with the products.",
       "link_to_view": "https://mahadirazib.github.io/ShoppingCartDemo",
       "link_to_repo": "https://github.com/mahadirazib/ShoppingCartDemo",
-      "image": null
+      "images": ["productcart1.jpg", "productcart2.jpg"]
     },
     "similarwordfinder": {
       "name": "Similar word finder",
       "description": "This is a replica of erp that can be used in startup companies. Although it has limited features but it can be used for little teams. The main id and password is: 'bigboss' which is the admin/head account. But there are other roles such as employee, modarator, etc.",
       "link_to_view": "https://mahadirazib.github.io/Similar-Word-finder",
       "link_to_repo": "https://github.com/mahadirazib/Similar-Word-finder",
-      "image": null
+      "images": ["similarwordfinder1.jpg", "similarwordfinder2.jpg"]
     }
   },
   "Simple Games": {
@@ -51,21 +51,21 @@
       "description": "This game is developed using react.js. This is not a full stack app, so player have to play in the same device. But, it can extend to fullstack.",
       "link_to_view": "https://mahadirazib.github.io/TikTakToe/",
       "link_to_repo": "https://github.com/mahadirazib/TikTakToe",
-      "image": null
+      "images": ["tiktaktoegame1.jpg", "tiktaktoegame2.jpg"]
     },
     "numbergame": {
       "name": "Number Guesser Game",
       "description": "This game is developed using vanila js. This is not a full stack app.",
       "link_to_view": "https://mahadirazib.github.io/numberGuesserGame/",
       "link_to_repo": "https://github.com/mahadirazib/numberGuesserGame",
-      "image": null
+      "images": ["numbergame1.jpg", "numbergame2.jpg"]
     },
     "dicegame": {
       "name": "Dice Game",
       "description": "It is simple game to play between friends. it can be extended to a fullstack application where two friends can play this game live togather.",
       "link_to_view": "https://mahadirazib.github.io/diceGame/",
       "link_to_repo": "https://github.com/mahadirazib/diceGame",
-      "image": null
+      "images": ["dicegame1.jpg", "dicegame2.jpg"]
     }
   },
   "Other Projects": {
@@ -74,21 +74,21 @@
       "description": "This browser extension is used by designer's who are selling their products in freepik. It is created with javascript and.",
       "link_to_view": "https://microsoftedge.microsoft.com/addons/detail/freepik-indivisual-downlo/hjliaacbafimmjfjckoakdincebbiphf",
       "link_to_repo": null,
-      "image": null
+      "images": ["browserextension1.jpg"]
     },
     "bulkwatermark": {
       "name": "Bulk watermark images",
       "description": "Select the watermark/logo > chose the position > select the folder that contains the images. that's it.This app is created with python.",
       "link_to_view": null,
       "link_to_repo": "https://github.com/mahadirazib/easy-watermark",
-      "image": null
+      "images": ["bulkwatermark1.jpg", "bulkwatermark2.jpg", "bulkwatermark3.jpg"]
     },
     "shopmanagement": {
       "name": "Shop Management Demo",
       "description": "This is a simple project build with java. It it a top level overview of a shop management system.",
       "link_to_view": null,
       "link_to_repo": "https://github.com/mahadirazib/ShopManagementDemo",
-      "image": null
+      "images": null
     }
   }
 }

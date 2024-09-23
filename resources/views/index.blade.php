@@ -58,8 +58,8 @@
 
         </div>
 
-        <div class="col-span-2 overflow-hidden p-6 w-100" style="height: 100%">
-            <div class="flex w-100 h-100 flex-wrap items-center justify-items-center justify-center" style="height: 100%">
+        <div class="col-span-2 overflow-hidden p-6 w-100" style="height: 100%;">
+            <div class="flex w-100 h-100 flex-wrap items-center justify-items-center justify-center" style="height: 100%; animation: grow-opacity-animation 1s ease;">
                 <img class="w-100 image-hover" src="{{ asset('storage/images/my_image.jpg') }}" style="" alt="My Image">
                 <div class="back-1 bg-cyan-600" style="border-radius: 50%"></div>
                 <div class="back-2 bg-cyan-600" style="border-radius: 50%"></div>
@@ -136,6 +136,18 @@
         }
         100% {
             transform: rotate(0deg);
+        }
+    }
+
+
+    @keyframes grow-opacity-animation {
+        0%   {
+        opacity: 0;
+        transform: scale(50%);
+        }
+        100% {
+        transform: scale(100%);
+        opacity: 1;
         }
     }
 
