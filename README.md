@@ -60,7 +60,7 @@ If you want the contact page to work properly then create a gmail app. And chang
 
 ## Conclusion
 
-This is a fully functional template that you can use to build your portfolio right away. Just edit the informations and the portfolio is ready. And make sure to change the name of the file .env.example to .env
+This is a fully functional template that you can use to build your portfolio right away. Just edit the informations and the portfolio is ready. And make sure to change the name of the file .env.example to .env .
 If you host this portfolio in the web then after deploying go to "yoursite.com/make_symlink" this route for linking the files properly.
 
 # Thank you
