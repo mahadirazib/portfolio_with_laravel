@@ -18,11 +18,11 @@ projects.json file is used for projects page. The format of this page is like:\
 ```
   "Name of the section": {
     "unique_name": {
-      "name"        : "Name of the Project",
-      "description" : "Description of the project.",
-      "link_to_view": "Link to the live project(If the site is live on internet).",
-      "link_to_repo": "Link to github repository(if it is uploaded in github).",
-      "images": ["image1.format", "image2.format", ..... ]
+      "name"          : "Name of the Project",
+      "description"   : "Description of the project.",
+      "link_to_view"  : "Link to the live project(If the site is live on internet).",
+      "link_to_repo"  : "Link to github repository(if it is uploaded in github).",
+      "images"        : ["image1.format", "image2.format", ..... ]
     },
     ............
   }
@@ -35,9 +35,9 @@ experience.json file is used for experiences page. There are two part in this pa
 ```
   "experiences": {
     "Company name": {
-      "designation": "Designation or title of your job",
-      "from": "start date",
-      "to": "end date"
+      "designation" : "Designation or title of your job",
+      "from"        : "start date",
+      "to"          : "end date"
     }
     ...........
   }
@@ -48,7 +48,7 @@ experience.json file is used for experiences page. There are two part in this pa
 skills.json file is used for this page. The format of the json file looks like this:\
 ```
   "Name of the Section": {
-    "Skill Name": "familiarity%"
+    "Skill Name"  : "familiarity%"
     ...............
   }
 ```
