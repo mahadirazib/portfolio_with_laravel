@@ -23,5 +23,18 @@
     "test": "tests"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mahadirazib/portfolio_with_laravel.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mahadirazib/portfolio_with_laravel/issues"
+  },
+  "homepage": "https://github.com/mahadirazib/portfolio_with_laravel#readme",
+  "dependencies": {
+    "jsonfile": "^6.1.0",
+    "moment": "^2.30.1",
+    "simple-git": "^3.27.0"
+  }
 }
