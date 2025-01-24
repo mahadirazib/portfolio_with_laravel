@@ -27,7 +27,7 @@ projects.json file is used for projects page. The format of this page is like:\
     ............
   }
 ```
-The project images is held in the storage/app/public/project_images directory. Just specify the name opf the images in the json file. And make sure to start any links with "https://".
+The project images is held in the storage/app/public/project_images directory. Just specify the name of the images in the json file. And make sure to start any links with "https://".
 
 ### Edit Experiences page info:
 
